@@ -64,6 +64,6 @@ describe "squares" do
 
   xit 'uses the +=' do
     ternary_contents = File.read(File.join(File.dirname(__FILE__), '..', 'operations.rb'))
-    expect(ternary_contents.scan(/.*\||.*=.*/).length).to eq 1
+    expect(ternary_contents.scan(/\+=/).length).to eq 1
   end
 end
