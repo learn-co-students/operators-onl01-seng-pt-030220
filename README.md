@@ -1,5 +1,5 @@
 ---
-tags: ||=, ternary, +=, operators
+tags: ternary, ||=, +=, operators
 language: ruby
 ---
 
