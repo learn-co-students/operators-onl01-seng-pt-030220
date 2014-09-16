@@ -1,6 +1,3 @@
-require_relative './spec_helper'
-require_relative '../operations.rb'
-
 describe "unsafe? using an if else block" do
   it 'returns true if speed is greater than 60' do
     answer = unsafe?(79)
