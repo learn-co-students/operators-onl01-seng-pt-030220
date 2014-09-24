@@ -1,6 +1,7 @@
 ---
 tags: ternary, ||=, +=, operators
 language: ruby
+resources: 1
 ---
 
 # Operations
@@ -12,3 +13,6 @@ language: ruby
 3. Build a sum machine that takes two parameters and sums them together.
 
 4. Given an array with nils in it output the squares of each element in the array and output 0 for any nil. You cannot use the method `#compact` but you should use the ||= operator.
+
+## Resources
+* [Stack Overflow](http://stackoverflow.com/) - [Ternary Operators](http://stackoverflow.com/a/4252945)
