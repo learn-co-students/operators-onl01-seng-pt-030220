@@ -1,4 +1,3 @@
-
 #use an if else statement to define whether the conditions are unsafe (speed is less than 40 or speed is greater than 60 )
 def unsafe?(speed)
   speed < 40 || speed > 60 ? "unsafe" : "safe"
