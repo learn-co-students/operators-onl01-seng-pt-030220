@@ -16,7 +16,7 @@ Remember to delete comments, otherwise the spec won't pass! :)
 
 2. Use the ternary operator to build the method `not_safe?` that accepts the same parameter and also outputs the same strings as `unsafe?`.
 
-3. Build a sum machine that takes two parameters and sums them together.
+3. Build a method named `sum_machine` that takes two parameters and sums them together.
 
 4. Given an array with nils in it output the squares of each element in the array and output 0 for any nil. You cannot use the method `#compact` but you should use the ||= operator.
 
