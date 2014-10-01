@@ -31,7 +31,7 @@ end
 #given the array
 crazy_sauce = [nil, 2, 4, 5, 6, nil, 10]
 #output the squares of each number. For nil output 0.
-#You cannot use the method #compact but do use the ||= operator
+#You cannot use the method #compact but do use the operator
 
 def squares(collection)
   collection.collect do |num|
