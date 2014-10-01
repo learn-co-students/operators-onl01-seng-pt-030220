@@ -1,10 +1,10 @@
 ---
-tags: ternary, ||=, +=, operators
+tags: ternary, ||=, +=, operators, DEPRECATED
 language: ruby
 resources: 1
 ---
 
-# Operations
+# Operations DEPRECATED
 
 ## Instructions
 
