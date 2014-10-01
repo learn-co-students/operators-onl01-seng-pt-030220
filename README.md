@@ -6,6 +6,12 @@ resources: 1
 
 # Operations
 
+## Instructions
+
+Remember to delete comments, otherwise the spec won't pass! :)
+
+### Follow the steps below:
+
 1. Use a if/else block to build a the `unsafe?` method that accepts a speed and returns either a 'safe' or 'unsafe' string based on whether the speed is either below 40 or above 60.
 
 2. Use the ternary operator to build the method `not_safe?` that accepts the same parameter and also outputs the same strings as `unsafe?`.
