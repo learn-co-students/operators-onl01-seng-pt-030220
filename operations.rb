@@ -14,6 +14,6 @@ def sum_machine(first_num, second_num)
   # code goes here
 end
 
-def squares(collection)
+def square(collection)
   # code goes here
 end
