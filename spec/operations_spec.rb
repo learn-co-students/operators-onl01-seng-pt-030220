@@ -65,7 +65,7 @@ describe "#square" do
   end
 
   it "returns 0 for array elements that are not numbers" do
-    numbers = [nil, 2, 4, "hi", 6, nil, 10]
+    numbers = [nil, 2, 4, nil, 6, nil, 10]
     expect(square(numbers)).to eq [0, 4, 16, 0, 36, 0, 100]
   end
 
