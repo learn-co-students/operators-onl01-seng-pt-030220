@@ -22,9 +22,10 @@ def sum_machine(first, second)
   sum
 end
 
-def squares(collection)
+def square(collection)
   collection.collect do |num|
     num ||= 0
     num*num
   end
 end
+
