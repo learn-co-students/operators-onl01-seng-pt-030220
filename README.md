@@ -36,11 +36,11 @@ When working on this section, you will be adding code to `lib/operations.rb`. Re
 
 ### Part Two
 
-Once all the tests for part one are passing, it's time to make a CLI. To do this, you'll be adding code to `lib/cli.rb`. 
+Once all the tests for part one are passing, it's time to make a CLI. To do this, you'll be adding and uncommenting code in `lib/cli.rb`. 
 
 To see what the interaction is like, type `ruby bin/runner.rb` into your terminal from the root of this directory. 
 
-Just like Part One, this section is test driven and the tests are written in order of increasing difficulty, so get them to pass in order.
+Just like Part One, this section is test driven and the tests are written in order of increasing difficulty, so get them to pass in order. Some code has been written out to help you so follow the instructions in the comments.
 
 ## Resources
 * [Stack Overflow](http://stackoverflow.com/) - [The += or "Plus Equals" Operator](http://stackoverflow.com/a/4252945)
