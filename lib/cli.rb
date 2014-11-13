@@ -15,7 +15,7 @@ def call
 end
 
 def welcome_message
-  # print out welcome here
+  # print out "Welcome!" here
 end
 
 def print_methods
@@ -37,9 +37,9 @@ def main
   # if METHODS.keys.include?(method_name)
   #   process_method(user_input)
   # elsif user_input.downcase == "q"
-  #   print out "Goodbye!" here
+  #   # print out "Goodbye!" here
   # else
-  #   print out "Method name not recognized." here
+  #   # print out "Method name not recognized." here
   # end
 end
 
