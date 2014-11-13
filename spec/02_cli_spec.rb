@@ -46,21 +46,21 @@ describe "Part Two - CLI" do
     end
 
     it "puts true when the user types 'unsafe?(105)'" do
-      allow(self).to receive(:gets).and_return("unsafe?(50)")
+      allow(self).to receive(:gets).and_return("unsafe?(100)")
       output = capture_stdout { main }
       expect(output).to include("true")
     end
 
     it "puts false when the user types 'not_safe?(60)'" do
-      allow(self).to receive(:gets).and_return("not_safe?")
-      output = capture_stdout { main }
-      expect(output).to include("true")
-    end
-
-    it "puts false when the user types 'not_safe?(60)'" do
-      allow(self).to receive(:gets).and_return("not_safe?")
+      allow(self).to receive(:gets).and_return("not_safe?(60)")
       output = capture_stdout { main }
       expect(output).to include("false")
+    end
+
+    it "puts true when the user types 'not_safe?(60)'" do
+      allow(self).to receive(:gets).and_return("not_safe?(105)")
+      output = capture_stdout { main }
+      expect(output).to include("true")
     end
 
     it "puts 45 when the user types 'sum_machine(1,9)'" do
