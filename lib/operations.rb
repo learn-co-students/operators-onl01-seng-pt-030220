@@ -28,4 +28,3 @@ def square(collection)
     num*num
   end
 end
-
