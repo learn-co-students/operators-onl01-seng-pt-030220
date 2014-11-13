@@ -78,13 +78,13 @@ describe "Part Two - CLI" do
     it "puts [4, 9, 25] when the user types 'square([2,3,5])'" do
       allow(self).to receive(:gets).and_return("square([2, 3, 5])")
       output = capture_stdout { main }
-      expect(output).to include("[4, 9, 25]")
+      [4, 9, 25].each { |num| expect(output).to include(num.to_s) }
     end
 
     it "puts [1, 4, 16] when the user types 'square(1,5)'" do
       allow(self).to receive(:gets).and_return("square([1, 2, 4])")
       output = capture_stdout { main }
-      expect(output).to include("[1, 4, 16]")
+      [1, 4, 16].each { |num| expect(output).to include(num.to_s) }
     end
 
   end
