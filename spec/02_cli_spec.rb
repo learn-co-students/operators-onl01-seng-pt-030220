@@ -2,7 +2,9 @@ require 'pry'
 describe "Part Two - CLI" do
   require_relative '../lib/cli.rb'
 
-  let(:method_names) { ["unsafe?","not_safe?","square","sum_machine"] }
+  let(:names)     { ["unsafe?","not_safe?","square","sum_machine"] }
+  let(:arguments) { ["number","number","number,number","array of numbers"] }
+  let (:examples) { ['unsafe?(95)', 'not_safe?(50)', 'sum_machine(4,6)', 'square([3,5,6])'] }
 
   describe "#welcome_message" do
     it "prints a welcome message to screen" do
@@ -15,7 +17,7 @@ describe "Part Two - CLI" do
     it "prints out 'All Methods' followed by a list of every method name" do
       output = capture_stdout { print_methods }
       expect(output).to match("All Methods:")
-      method_names.each { |name| expect(output).to include(name) }
+      [names,arguments,examples].each { |arr| arr.each { |str| expect(output).to include(str) } }
     end
   end
 
