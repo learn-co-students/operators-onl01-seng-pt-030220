@@ -1,8 +1,12 @@
 require_relative '../lib/operations.rb'
-
-SINGLE_INT_ARG = ["unsafe?", "not_safe?"]
-DOUBLE_INT_ARG = ["sum_machine"]
-ARRAY_ARG = ["square"]
+require 'json'
+require 'pry'
+METHODS = {
+  "unsafe?"     => { :arg => "number",          :ex => "unsafe?(95)"     },
+  "not_safe?"   => {:arg => "number",           :ex => "not_safe?(50)"   },
+  "sum_machine" => {:arg => "number,number",    :ex => "sum_machine(4,6)"},
+  "square"      => {:arg => "array of numbers", :ex => "square([3,5,6])" }
+}
 
 def call
   welcome_message
@@ -15,44 +19,36 @@ def welcome_message
 end
 
 def print_methods
-  methods = SINGLE_INT_ARG + DOUBLE_INT_ARG + ARRAY_ARG
   puts "All Methods:"
-  methods.each {|n| puts "#{n}" }
-end
-
-def main
-  puts "Type the name of the method you would like to use, type q to quit:"
-  method_name = gets.chomp.strip
-  if SINGLE_INT_ARG.include?(method_name)
-    single_int_arg(method_name)
-  elsif DOUBLE_INT_ARG.include?(method_name)
-    double_int_arg(method_name)
-  elsif ARRAY_ARG.include?(method_name)
-    array_arg(method_name)
-  elsif method_name.downcase == "q"
-    "Goodbye!"
-    exit
-  else
-    puts "Method name not recognized."
-    main
+  METHODS.each do |name, info| 
+    puts "- #{name}"
+    puts "    Arguments: #{info[:arg]}"
+    puts "    Example: #{info[:ex]}"
   end
 end
 
-def single_int_arg(method_name)
-  puts "Type a number to give to #{method_name}:"
-  number = gets.chomp.strip.to_i
-  puts send(method_name, number)
+def main
+  puts "Type a method followed by its arguments in parenthesis, type q to quit:"
+  method_and_args = gets.chomp.strip
+  method_name = method_and_args[/(.*?)\s*\(/, 1]
+  args = method_and_args[/\(([^)]+)\)/, 1]
+  if METHODS.keys.include?(method_name)
+    process_method(method_name, args)
+  elsif method_and_args.downcase == "q"
+    puts "Goodbye!"
+  else
+    puts "Method name not recognized."
+  end
 end
 
-def double_int_arg(method_name)
-  puts "Type two numbers, separated by commas, to pass to #{method_name} as the first and second arguments:"
-  args = gets.chomp.strip.gsub(" ", "")
-  first, second = args.split(",").map(&:to_i)
-  puts send(method_name, first, second)
-end
-
-def array_arg(method_name)  
-  puts "Type numbers, separated by commas, that you would like to pass to #{method_name}:"
-  num_array = gets.chomp.strip.gsub(" ", "").split(",").map(&:to_i)
-  puts send(method_name, num_array).inspect
+def process_method(method_name, args)
+  if method_name == "unsafe?" || method_name == "not_safe?"
+    puts send(method_name, args.to_i)
+  elsif method_name == "sum_machine"
+    first, second = args.split(",").map(&:to_i)
+    puts send(method_name, first, second)
+  elsif method_name == "square"
+    array = JSON.parse(args);
+    puts send(method_name, array).inspect
+  end
 end
