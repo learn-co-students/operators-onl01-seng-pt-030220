@@ -15,11 +15,11 @@ def call
 end
 
 def welcome_message
-  puts "Welcome!"
+  # print out "Welcome!" here
 end
 
 def print_methods
-  puts "All Methods:"
+  # print out "All Methods:" here
   METHODS.each do |name, info| 
     puts "- #{name}"
     puts "    Argument(s): #{info[:arg]}"
@@ -28,16 +28,19 @@ def print_methods
 end
 
 def main
-  puts "Type a method followed by its arguments in parenthesis, type q to quit:"
-  user_input = gets.chomp.strip
-  method_name = user_input[/(.*?)\s*\(/, 1]
-  if METHODS.keys.include?(method_name)
-    process_method(user_input)
-  elsif user_input.downcase == "q"
-    puts "Goodbye!"
-  else
-    puts "Method name not recognized."
-  end
+  # print out "Type a method followed by its arguments in parenthesis, type q to quit:"
+  # make a variable called user_input and set it equal to gets.chomp here
+  
+  # comment in the code below after you've made the variable user_input
+
+  # method_name = user_input[/(.*?)\s*\(/, 1]
+  # if METHODS.keys.include?(method_name)
+  #   process_method(user_input)
+  # elsif user_input.downcase == "q"
+  #   # print out "Goodbye!" here
+  # else
+  #   # print out "Method name not recognized." here
+  # end
 end
 
 def process_method(user_input)

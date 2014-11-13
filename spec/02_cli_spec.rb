@@ -7,14 +7,14 @@ describe "Part Two - CLI" do
   let (:examples) { ['unsafe?(95)', 'not_safe?(50)', 'sum_machine(4,6)', 'square([3,5,6])'] }
 
   describe "#welcome_message" do
-    it "prints a welcome message to screen" do
+    it "prints 'Welcome!' to screen" do
       output = capture_stdout { welcome_message }
       expect(output).to match("Welcome!")
     end
   end
 
   describe "#print_methods" do
-    it "prints out 'All Methods' followed by a list of every method name" do
+    it "prints out 'All Methods:' followed by a list of every method name" do
       output = capture_stdout { print_methods }
       expect(output).to match("All Methods:")
       [names,arguments,examples].each { |arr| arr.each { |str| expect(output).to include(str) } }
