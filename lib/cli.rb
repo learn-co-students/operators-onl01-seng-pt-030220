@@ -48,9 +48,9 @@ end
 
 def process_method(method_name, args)
   if method_name == "unsafe?" || method_name == "not_safe?"
-    puts send(method_name, args.to_i)
+    puts send(method_name, args.to_i).inspect
   else
     first_arg, second_arg = args.split(",").map(&:to_i)
-    puts send(method_name, first_arg, second_arg)
+    puts send(method_name, first_arg, second_arg).inspect
   end
 end
