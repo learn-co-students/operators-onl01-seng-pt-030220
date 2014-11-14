@@ -21,10 +21,3 @@ def sum_machine(first, second)
   end
   sum
 end
-
-def square(collection)
-  collection.collect do |num|
-    num ||= 0
-    num*num
-  end
-end
