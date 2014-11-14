@@ -19,15 +19,15 @@ end
 
 def print_methods
   puts "All Methods:"
-  METHODS.each do |name, info| 
-    puts "- #{name}"
-    puts "    Argument(s): #{info[:arg]}"
-    puts "    Example:     #{info[:ex]}"
+  METHODS.each_with_index do |(name, info), i| 
+    puts "#{i + 1}. #{name}"
+    puts "  Argument(s): #{info[:arg]}"
+    puts "  Example:     #{info[:ex]}"
   end
 end
 
 def main
-  puts "Type a method followed by its arguments in parenthesis, type q to quit:"
+  print "Type the method followed by argument(s) in parenthesis or type q to quit: "
   user_input = gets.chomp.strip
   evaluate_user_input(user_input)
   main
@@ -38,7 +38,7 @@ def evaluate_user_input(user_input)
   if METHODS.keys.include?(method_name)
     args = user_input[/\(([^)]+)\)/, 1]
     process_method(method_name, args)
-  elsif user_input.downcase == "q" || user_input.downcase == "exit" 
+  elsif user_input.downcase == "q" || user_input.downcase =~ /exit/
     puts "Goodbye!"
     exit
   else
@@ -48,9 +48,9 @@ end
 
 def process_method(method_name, args)
   if method_name == "unsafe?" || method_name == "not_safe?"
-    puts send(method_name, args.to_i)
+    puts send(method_name, args.to_i).inspect
   else
     first_arg, second_arg = args.split(",").map(&:to_i)
-    puts send(method_name, first_arg, second_arg)
+    puts send(method_name, first_arg, second_arg).inspect
   end
 end
