@@ -19,3 +19,4 @@ end
 def square(collection)
 
 end
+

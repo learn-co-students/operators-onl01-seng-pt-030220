@@ -1,5 +1,4 @@
-describe "Part One - Building Methods" do
-  require_relative '../lib/operations.rb'
+describe "Operations" do
   let(:file_contents) { File.read(File.join(File.dirname(__FILE__), '..', 'lib/operations.rb')) }
 
   describe "#unsafe?" do
@@ -43,36 +42,20 @@ describe "Part One - Building Methods" do
 
   describe "#sum_machine" do
     it "returns the sum of the two parameters" do
-      expect(sum_machine(1,9)).to eq 45
-      expect(sum_machine(3,7)).to eq 25
-      expect(sum_machine(1,5)).to eq 15
+      expect(sum_machine(1,9)).to eq(45)
+      expect(sum_machine(3,7)).to eq(25)
+      expect(sum_machine(1,5)).to eq(15)
     end
 
     it "returns the sum of the two parameters even if passed in high to low" do
-      expect(sum_machine(9,1)).to eq 45
-      expect(sum_machine(7,3)).to eq 25
-      expect(sum_machine(5,1)).to eq 15
+      expect(sum_machine(9,1)).to eq(45)
+      expect(sum_machine(7,3)).to eq(25)
+      expect(sum_machine(5,1)).to eq(15)
     end
 
     it 'uses the +=' do
-      expect(file_contents.scan(/.*\+.*=.*/).length).to eq 1
+      expect(file_contents.scan(/.*\+.*=.*/).length).to eq(1)
     end
   end
-
-  describe "#square" do
-
-    it "returns an array of the square of the the sum of the two parameters" do
-      numbers = [2, 3, 5, 9]
-      expect(square(numbers)).to eq [4, 9, 25, 81]
-    end
-
-    it "returns 0 for array elements that are not numbers" do
-      numbers = [nil, 2, 4, nil, 6, nil, 10]
-      expect(square(numbers)).to eq [0, 4, 16, 0, 36, 0, 100]
-    end
-
-    it 'uses the ||=' do
-      expect(file_contents.scan(/\\|\|=/).length).to eq(1)
-    end
-  end
+  
 end
