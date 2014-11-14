@@ -35,7 +35,8 @@ def main
 
   # method_name = user_input[/(.*?)\s*\(/, 1]
   # if METHODS.keys.include?(method_name)
-  #   process_method(user_input)
+  #   args = user_input[/\(([^)]+)\)/, 1]
+  #   process_method(method_name, args)
   # elsif user_input.downcase == "q"
   #   # print out "Goodbye!" here
   # else
@@ -43,16 +44,14 @@ def main
   # end
 end
 
-def process_method(user_input)
-  method_name = user_input[/(.*?)\s*\(/, 1]
-  args = user_input[/\(([^)]+)\)/, 1]
+def process_method(method_name, args)
   if method_name == "unsafe?" || method_name == "not_safe?"
     puts send(method_name, args.to_i)
   elsif method_name == "sum_machine"
     first, second = args.split(",").map(&:to_i)
     puts send(method_name, first, second)
   elsif method_name == "square"
-    array = JSON.parse(args);
+    array = JSON.parse(args.gsub("nil", "0"))
     puts send(method_name, array).inspect
   end
 end
