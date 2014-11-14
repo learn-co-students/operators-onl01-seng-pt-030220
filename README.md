@@ -9,17 +9,21 @@ resources: 3
 ## Objectives
 
 ### Part One
-* Get familiar with passing arguments to methods.
-* Get familiar with passing multiple arguments to a method.
-* Feel at ease when manipulating arguments within the methods.
-* Get comfy returning the desired values from a method.
+
+Get familiar with: 
+
+* passing arguments to methods
+* passing multiple arguments to a method
+* manipulating arguments within the methods
+* returning the desired values from a method
 
 ### Part Two
-* Build a command-line interface, or CLI, that interacts with the methods you build above.
+
+* Build a command-line interface, or CLI, that interacts with the methods you built above.
 
 ## Instructions
 
-**Remember to delete comments, otherwise the spec won't pass!**
+**Note: Remember to delete comments, otherwise the spec won't pass!**
 
 ### Part One
 
@@ -43,6 +47,7 @@ To see what the interaction is like, type `ruby bin/runner.rb` into your termina
 Just like Part One, this section is test driven and the tests are written in order of increasing difficulty, so get them to pass in order. Some code has been written out to help you so follow the instructions in the comments.
 
 ## Resources
+
 * [Ruby Operators](http://www.techotopia.com/index.php/Ruby_Operators)
 * [Stack Overflow](http://stackoverflow.com/) - [The += or "Plus Equals" Operator](http://stackoverflow.com/a/4252945)
 * [Ruby Inside](http://www.rubyinside.com/) - [The ||= or "Or Equals" Operator](http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html)
