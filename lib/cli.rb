@@ -1,12 +1,16 @@
 require_relative '../lib/operations.rb'
 require 'json'
 
+# please do not add code or remove code from
+# this file
+
 METHODS = {
   "unsafe?"     => { :arg => "number",          :ex => "unsafe?(95)"     },
   "not_safe?"   => {:arg => "number",           :ex => "not_safe?(50)"   },
   "sum_machine" => {:arg => "number,number",    :ex => "sum_machine(4,6)"},
 }
 
+# the call method calls on three other methods
 def call
   welcome_message
   print_methods
@@ -26,6 +30,10 @@ def print_methods
   end
 end
 
+# the main method calls on itself, making
+# it recursive
+# to read up on recursive methods, go to
+# http://stackoverflow.com/a/6418144/2890716
 def main
   print "Type the method followed by argument(s) in parenthesis or type q to quit: "
   user_input = gets.chomp.strip

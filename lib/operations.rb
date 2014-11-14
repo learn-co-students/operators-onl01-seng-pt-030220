@@ -13,10 +13,3 @@ end
 def sum_machine(first, second)
 
 end
-
-
-
-def square(collection)
-
-end
-
