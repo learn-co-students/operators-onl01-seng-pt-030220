@@ -54,7 +54,7 @@ describe "Operations" do
     end
 
     it 'uses the +=' do
-      expect(file_contents.scan(/.*\+.*=.*/).length).to eq(1)
+      expect(file_contents.scan(/.*\+.*=.*/).length).to be >=(1)
     end
   end
   
