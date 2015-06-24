@@ -39,23 +39,5 @@ describe "Operations" do
       expect(match[1]).to match(/.*\?.*:.*/)
     end
   end
-
-  describe "#sum_machine" do
-    it "returns the sum of the two parameters" do
-      expect(sum_machine(1,9)).to eq(45)
-      expect(sum_machine(3,7)).to eq(25)
-      expect(sum_machine(1,5)).to eq(15)
-    end
-
-    it "returns the sum of the two parameters even if passed in high to low" do
-      expect(sum_machine(9,1)).to eq(45)
-      expect(sum_machine(7,3)).to eq(25)
-      expect(sum_machine(5,1)).to eq(15)
-    end
-
-    it 'uses the +=' do
-      expect(file_contents.scan(/.*\+.*=.*/).length).to be >=(1)
-    end
-  end
   
 end
