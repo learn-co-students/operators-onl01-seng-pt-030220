@@ -1,14 +1,11 @@
-# Operations
+# Operators
 
 ## Objectives
 
-Get familiar with: 
-
 * Learn about the ternary operator
 * Review using comparison operators and boolean operators
-* passing arguments to methods
-* manipulating arguments within the methods
-* returning the desired values from a method
+* Practice implementing flow control using if/else statements 
+
 
 ## Reviewing Operations
 
