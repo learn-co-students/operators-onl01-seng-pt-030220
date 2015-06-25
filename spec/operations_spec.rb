@@ -1,3 +1,4 @@
+require 'pry'
 describe "Operations" do
   let(:file_contents) { File.read(File.join(File.dirname(__FILE__), '..', 'lib/operations.rb')) }
 
@@ -35,8 +36,9 @@ describe "Operations" do
     end
 
     it 'uses the ternary operator' do
-      match = file_contents.match(/def not_safe?[^\n]*\n([^\n]*)\nend/m)
-      expect(match[1]).to match(/.*\?.*:.*/)
+      methods = file_contents.split("not_safe?")
+      match = methods.last
+      expect(match).to include("||")
     end
   end
   

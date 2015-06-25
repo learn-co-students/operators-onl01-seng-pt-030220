@@ -52,6 +52,8 @@ The ternary operator has a few things going for it. First of all, as Rubyists, w
 
 Our first implementation of our are-you-a-baby? program required 6 lines of code. Using the ternary operator, we were able to implement the same behavior with only 2! That's a huge improvement, from a design point of view. 
 
+**A Note on Usage:** We use the ternary operator in a case like th one here, when the `if/else` statement that we would otherwise construct is *very simple*. If your program requires `if/elsif/else` statements, the ternary operator is not appropriate. 
+
 
 ## Instructions
 
@@ -61,7 +63,7 @@ Our first implementation of our are-you-a-baby? program required 6 lines of code
 	* Use an `if/else` block to build the `unsafe?`. It returns `true` if the speed is below 40 or above 60. 
   * Going 30 mph on the freeway would be unsafe, as would going 95 mph. 
   * Going 50 miles per hour, however, would return `false` as that's within the "safe" range.
-4.  Build the method `not_safe?` that is a version of your previous `unsafe?` method but with a [ternary operator](http://www.codecademy.com/glossary/ruby/ternary-operator) instead of an `if/else block`.
+4.  Build the method `not_safe?` that is a version of your previous `unsafe?` method but with a ternary operator instead of an `if/else block`.
 
 **A Debugging Reminder:** You can interact with your methods by typing `require 'pry'` at the top of your file and then placing the line `binding.pry` inside the method that you want to play around with. Then, when you run the test suite using `rspec` or `learn` in your terminal, your program will freeze when it hits the binding and you'll be able to explore your method inside your console.
 
