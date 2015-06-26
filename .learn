@@ -1,7 +1,8 @@
 tags:
   - ternary
-  - ||=
-  - operators
+  - boolean operators
+  - comparison operators
+  - if statements
 languages:
   - ruby
 resources: 4
