@@ -40,7 +40,7 @@ age < 2 ? "baby" : "not a baby"
 
 How does this work? In the above statement, the code before the `?` ("question mark") is evaluated as a boolean expression. If it returns true, the code on the left side of the `:` ("colon") will run, otherwise the code on the right will will run. 
 
-It's a way of expressing on `if` and an `else` statement together on one line in this format:
+It's a way of expressing an `if` and an `else` statement together on one line in this format:
 
 ```ruby
 conditional ? action_if_true : action_if_false
