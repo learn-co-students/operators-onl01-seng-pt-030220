@@ -1,6 +1,6 @@
 # Guide to Solving Operators
 
-### unsafe?
+### `unsafe?`
 
 After running `rspec` for the first time we see we have seven tests failing.
 
@@ -20,7 +20,7 @@ end
 ```
 This makes all our test for this method pass.
 
-### safe?
+### `safe?`
 
 In this `safe?` method we will write the same `if-statement` that we wrote in out `unsafe?` method using a ternary operator.
 
