@@ -4,11 +4,11 @@
 
 1. Use the ternary operator (`?:`).
 2. Review using comparison operators and boolean operators.
-3. Practice implementing flow control using `if`, `elsif`, and `else` statements.
+3. Practice implementing control flow using `if`, `elsif`, and `else` statements.
 
 ## Reviewing Operations
 
-In this lab, we'll be combining our knowledge of operators (like comparison and boolean operators) with our new understanding of flow control using `if`, `elsif`, and `else` statements. 
+In this lab, we'll be combining our knowledge of operators (like comparison and boolean operators) with our new understanding of control flow using `if`, `elsif`, and `else` statements. 
 
 This lab will require you to use the comparison operators (`>`, `<`, `==`, etc.) and boolean operators that you learned about in the previous unit.
 
