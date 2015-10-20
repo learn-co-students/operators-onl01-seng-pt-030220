@@ -67,7 +67,8 @@ def unsafe?(speed)
     false
   end
 end
-```   
+```
+
 This makes all our test for this method pass.
 
 ### `safe?`
