@@ -1,6 +1,6 @@
 # Guide to Solving Operators
 
-### unsafe?
+### `unsafe?`
 
 After running `rspec` for the first time we see we have seven tests failing.
 
@@ -70,7 +70,7 @@ end
 ```   
 This makes all our test for this method pass.
 
-### safe?
+### `safe?`
 
 
 ```bash
