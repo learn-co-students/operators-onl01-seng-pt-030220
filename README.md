@@ -16,7 +16,9 @@ This lab will require you to use a new operator that you haven't been introduced
 
 ## The Ternary Operator `?:`
 
-The ternary operator (`?:`) is another type of comparison operator that is used in the context of `if` and `else` statements. Let's take this `if`/`else` statement pair and express it with a ternary operator instead: 
+The ternary operator (`?:`) is another type of comparison operator that is used in the context of `if` and `else` statements. Its best use case is to replace a simple `if`/`else` statement where you're basically saying: if this is true do something; if it's false do something else. If you have an `if` statement that requires an `elsif`, a ternary operator is not the best choice. 
+
+Let's take this `if`/`else` statement pair and express it with a ternary operator instead: 
 
 ```ruby
 age = 1
