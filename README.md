@@ -3,7 +3,9 @@
 ## Objectives
 
 1. Use the ternary operator (`?:`).
-2. Review using comparison operators and boolean operators.
+2. Understand when to use the ternary operator
+3. Understand the use of statement modifiers
+4. Review using comparison operators and boolean operators.
 3. Practice implementing control flow using `if`, `elsif`, and `else` statements.
 
 ## Reviewing Operations
@@ -16,7 +18,9 @@ This lab will require you to use a new operator that you haven't been introduced
 
 ## The Ternary Operator `?:`
 
-The ternary operator (`?:`) is another type of comparison operator that is used in the context of `if` and `else` statements. Let's take this `if`/`else` statement pair and express it with a ternary operator instead: 
+The ternary operator (`?:`) is another type of comparison operator that is used in the context of `if` and `else` statements. Its best use case is to replace a simple `if`/`else` statement where you're basically saying: if this is true do something; if it's false do something else. If you have an `if` statement that requires an `elsif`, a ternary operator is not the best choice. 
+
+Let's take this `if`/`else` statement pair and express it with a ternary operator instead: 
 
 ```ruby
 age = 1
@@ -52,6 +56,29 @@ The ternary operator has a few things going for it. First of all, as Rubyists, w
 Our first implementation of our are-you-a-baby? program required six lines of code. Using the ternary operator, we were able to implement the same behavior in only two lines! That's a great piece of refactoring!
 
 **A Note on Usage:** *We use the ternary operator in a case like the one here when the* `if` *&* `else` *statement pair that we would otherwise construct is* **very simple.** *If your situation requires* `if` *and* `elsif` *statements, then the switching is too complex for the ternary operator making it inappropriate to use.*
+
+## Statement Modifiers
+Ruby has a useful feature called a statement modifier that allows you to put a conditional at the end of a statement. For example, let's consider this statement:
+
+```ruby
+puts "Hey, it's 2015!"
+``` 
+
+However, we don't want to say "Hey, it's 2015!" every time this code is run. We only want to say it's 2015 if it's actually 2015. This is a good case for an `if` statement modifier.
+
+```ruby
+this_year = Time.now.year
+puts "Hey, it's 2015!" if this_year == "2015"
+``` 
+Now, with the statement modifier `if this_year == "2015"` we are only putting it if the year is, in fact, 2015.
+
+We can also use `unless` in a statement modifier as well. 
+
+```ruby
+this_year = Time.now.year
+puts "Hey, it's not 2015!" unless this_year == "2015"
+``` 
+
 
 ## Instructions
 
