@@ -42,7 +42,7 @@ age = 1
 age < 2 ? "baby" : "not a baby"
 ```
 
-How does this work? In the above statement, the code before the `?` ("question mark") is evaluated as a boolean expression. If it returns true, the code on the left side of the `:` ("colon") will run, otherwise the code on the right will will run. 
+How does this work? In the above statement, the code before the `?` ("question mark") is evaluated as a boolean expression. If it returns true, the code on the left side of the `:` ("colon") will run, otherwise the code on the right will run. 
 
 It's a way of expressing an `if` and an `else` statement together on one line in this format:
 
@@ -96,3 +96,5 @@ puts "Hey, it's not 2015!" unless this_year == "2015"
 * [Stack Overflow - Ternary Operators](http://stackoverflow.com/a/4252945)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/operators' title='Operators'>Operators</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/operators'>Ternary Operators and Statement Modifiers</a> on Learn.co and start learning to code for free.</p>
