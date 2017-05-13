@@ -68,15 +68,15 @@ However, we don't want to say "Hey, it's 2015!" every time this code is run. We 
 
 ```ruby
 this_year = Time.now.year
-puts "Hey, it's 2015!" if this_year == "2015"
+puts "Hey, it's 2015!" if this_year == 2015
 ``` 
-Now, with the statement modifier `if this_year == "2015"` we are only putting it if the year is, in fact, 2015.
+Now, with the statement modifier `if this_year == 2015` we are only putting it if the year is, in fact, 2015.
 
 We can also use `unless` in a statement modifier as well. 
 
 ```ruby
 this_year = Time.now.year
-puts "Hey, it's not 2015!" unless this_year == "2015"
+puts "Hey, it's not 2015!" unless this_year == 2015
 ``` 
 
 
